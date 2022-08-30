@@ -1,0 +1,24 @@
+# Same as .gitignore + anything not needed at runtime
+
+.idea/
+.DS_Store
+node_modules/
+npm-debug.log.*
+yarn-error.log
+.env
+.vscode/*
+
+## MacOS
+.DS_Store
+
+## User settings
+xcuserdata/
+
+## Config
+*.xcconfig
+
+## Not needed at runtime
+src/
+scripts/
+configs/
+.env-sample
