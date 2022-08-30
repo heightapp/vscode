@@ -1,0 +1,46 @@
+{
+  "name": "height-vscode",
+  "displayName": "Height",
+  "publisher": "Height",
+  "version": "0.0.1",
+  "description": "Height",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/cjs/index.js",
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "NODE_ENV=production ./scripts/build.js --cjs",
+    "dev": "NODE_ENV=development ./scripts/build.js --cjs",
+    "dev:watch": "nodemon --quiet --ext js,ts --watch src --watch env --exec \"npm run dev\"",
+    "lint": "eslint ./src",
+    "prepare": "npm run build"
+  },
+  "repository": "git+https://github.com/heightapp/vscode.git",
+  "author": "Height",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heightapp/vscode/issues"
+  },
+  "homepage": "https://github.com/heightapp/vscode#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.11.0",
+    "@typescript-eslint/parser": "^5.34.0",
+    "esbuild": "^0.15.5",
+    "esbuild-plugin-ifdef": "^1.0.1",
+    "eslint": "^8.22.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.19",
+    "tsc-alias": "^1.7.0",
+    "typescript": "^4.7.4",
+    "yargs": "^17.5.1"
+  },
+  "dependencies": {
+  }
+}
