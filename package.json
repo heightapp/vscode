@@ -1,18 +1,40 @@
 {
   "name": "height-vscode",
-  "displayName": "Height",
+  "displayName": "Height Code to Task",
+  "description": "Automatically create tasks right from code comments.",
   "publisher": "Height",
-  "version": "0.0.1",
-  "description": "Height",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.70.0"
   },
   "categories": [
     "Other"
   ],
+  "galleryBanner": {
+    "color": "#121212",
+    "theme": "light"
+  },
+  "icon": "assets/icon.png",
+  "qna": "https://forum.height.app/",
   "activationEvents": [
-    "onStartupFinished"
+    "onStartupFinished",
+    "onCommand:height-vscode.login",
+    "onCommand:height-vscode.logout"
   ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "height-vscode.login",
+        "title": "Login",
+        "category": "Height"
+      },
+      {
+        "command": "height-vscode.logout",
+        "title": "Logout",
+        "category": "Height"
+      }
+    ]
+  },
   "main": "./dist/cjs/index.js",
   "scripts": {
     "vscode:prepublish": "npm run build",
@@ -22,7 +44,10 @@
     "lint": "eslint ./src",
     "prepare": "npm run build"
   },
-  "repository": "git+https://github.com/heightapp/vscode.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heightapp/vscode"
+  },
   "author": "Height",
   "license": "MIT",
   "bugs": {
@@ -42,5 +67,12 @@
     "yargs": "^17.5.1"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.184",
+    "@types/node": "^18.7.11",
+    "@types/uuid": "^8.3.4",
+    "@types/vscode": "^1.70.0",
+    "dotenv": "^16.0.1",
+    "lodash": "^4.17.21",
+    "uuid": "^8.3.2"
   }
 }

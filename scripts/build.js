@@ -35,7 +35,9 @@ const external = Object.keys({
 });
 
 // vscode library is provided by VSCode
-external.push('vscode');
+// in prod, we want to bundle everything together for performance
+const devExternals = [...external, 'vscode'];
+const prodExternals = ['vscode'];
 
 const cleanup = () => {
   fs.rmSync('./dist', {recursive: true, force: true});
@@ -47,6 +49,12 @@ const outDirFromConfig = (configPath) => {
   return path.resolve('./config', outDir);
 };
 
+// Define node env statically since we want this to be part of the build
+// and not depend on the user's environment.
+const define = {
+  'process.env.NODE_ENV': `"${process.env.NODE_ENV ?? 'development'}"`,
+};
+
 const build = async () => {
   // Remove the directory before building or moving files fails on Windows (does not override)
   cleanup();
@@ -55,9 +63,11 @@ const build = async () => {
     const config = {
       entryPoints,
       bundle: true,
-      external,
+      external: process.env.NODE_ENV === 'production' ? prodExternals : devExternals,
       platform: 'node',
       treeShaking: true,
+      define,
+      minify: process.env.NODE_ENV === 'production',
     };
 
     const promises = [];
