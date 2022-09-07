@@ -3,7 +3,7 @@
   "displayName": "Height Code to Task",
   "description": "Automatically create tasks right from code comments.",
   "publisher": "Height",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -12,7 +12,7 @@
   ],
   "galleryBanner": {
     "color": "#121212",
-    "theme": "light"
+    "theme": "dark"
   },
   "icon": "assets/icon.png",
   "qna": "https://forum.height.app/",
