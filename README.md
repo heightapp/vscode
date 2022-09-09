@@ -1,5 +1,9 @@
-# VSCode extension for Height
+# Height: Code To Task
 
-1. Authenticates the user with OAuth
-2. Parses todos in code
-3. Creates tasks based on todos and replace todo with task index/name
+Automatically create tasks as you code — turn your todo comments into trackable tasks. With Height Code To Task you can:
+
+- Easily find tasks in your codebase using their unique task IDs
+- Configure the tool to watch as many repositories as you want
+- Auto-assign tasks created from your code to your future self
+
+<img width="1440" alt="code-to-task" src="https://user-images.githubusercontent.com/1479520/189356702-88b9a6ea-02f6-4ac1-9db5-3b89f287d4b4.png">
