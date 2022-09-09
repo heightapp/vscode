@@ -10,12 +10,19 @@
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "task",
+    "project",
+    "management",
+    "organizer",
+    "planning"
+  ],
   "galleryBanner": {
     "color": "#121212",
     "theme": "dark"
   },
   "icon": "assets/icon.png",
-  "qna": "https://forum.height.app/",
+  "qna": "https://forum.height.app/c/help/1",
   "activationEvents": [
     "onStartupFinished",
     "onCommand:height-vscode.login",
