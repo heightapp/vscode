@@ -3,7 +3,7 @@
   "displayName": "Height Code to Task",
   "description": "Automatically create tasks right from code comments.",
   "publisher": "Height",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "engines": {
     "vscode": "^1.70.0"
   },
