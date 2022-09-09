@@ -1,4 +1,3 @@
-import {ClientError, ClientErrorCode} from '@heightapp/client';
 import updateTodos, {parseGitIgnore} from '@heightapp/update-todos';
 import createClient from 'clientHelpers/createClient';
 import getDefaultListIds from 'clientHelpers/getDefaultListIds';
@@ -11,7 +10,7 @@ class Watcher {
   readonly session: AuthenticationSession;
   private context: ExtensionContext;
 
-  private eventEmitter = new EventEmitter<{type: 'invalidToken'}>();
+  private eventEmitter = new EventEmitter<{type: 'error'; error: unknown}>();
   private gitRepoRoots: Array<string>;
   private onDidSaveTextDocumentDisposable?: Disposable;
 
@@ -57,13 +56,7 @@ class Watcher {
           try {
             return await client.task.create({name, listIds, assigneesIds: [userId]});
           } catch (e) {
-            if (e instanceof ClientError) {
-              if (e.code === ClientErrorCode.RefreshTokenInvalid) {
-                this.eventEmitter.fire({type: 'invalidToken'});
-              }
-            }
-
-            // Ignore other errors. We don't want this to crash watch
+            this.eventEmitter.fire({type: 'error', error: e});
             return null;
           }
         },

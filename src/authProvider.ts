@@ -79,7 +79,7 @@ class AuthProvider implements AuthenticationProvider, Disposable {
       this.sessionChangeEmitter.fire({added: [session], removed: [], changed: []});
       return session;
     } catch (e) {
-      window.showErrorMessage(`Sign in failed: ${(e as Error).toString()}`);
+      window.showErrorMessage(`Height: sign in failed: ${(e as Error).toString()}`);
       throw e;
     }
   }
