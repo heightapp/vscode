@@ -31,19 +31,19 @@
     dotenv "^16.0.1"
     node-fetch "^3.2.10"
 
-"@heightapp/comment-patterns@^0.12.8":
-  version "0.12.8"
-  resolved "https://registry.yarnpkg.com/@heightapp/comment-patterns/-/comment-patterns-0.12.8.tgz#344d5083d42b16f4ab4da0182d533d3e337c3b4e"
-  integrity sha512-cOssijZmFKeknBW79WyCpMJBpSayoP2P04cKPFdAjpnoC15FbSNmoR+mzIcCGfiRjiUTaymwk6+hFX00Nvj1dw==
+"@heightapp/comment-patterns@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@heightapp/comment-patterns/-/comment-patterns-0.13.0.tgz#9242bec46021c80dde0886ffe0aabdf40c8451c0"
+  integrity sha512-OA75SYwQsBN8PYb1fl5SwHn1adJGksGZiJ+VGZcT3v6AbAPCp1sf9QHvidY/a2IC2QRnzskbY4Fs6tH/XtQjyQ==
   dependencies:
     lodash "^4.17.11"
 
-"@heightapp/update-todos@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@heightapp/update-todos/-/update-todos-1.0.4.tgz#1e3fbf2d70b5373eb382d88af29e41647306c04a"
-  integrity sha512-jeUpFbWOJ00cB7w342gtmYXArjTb/GDS3Saz6vL2PvgtyuRpCd+DhbRu4KfJaiWw2gihWAbk/e/CS37mWGmlqw==
+"@heightapp/update-todos@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@heightapp/update-todos/-/update-todos-1.1.1.tgz#adc5eace2e2bd135cacfbd5e4fe85e47888b1f40"
+  integrity sha512-Q2KTGVTW1EZ2sleASOtA5gE2KPdxb/JT2WEYX8WvxlO1UP9njchgmqTmviFiB5Vn3FCE1fRrtwFF9cCFhHFwKg==
   dependencies:
-    "@heightapp/comment-patterns" "^0.12.8"
+    "@heightapp/comment-patterns" "0.13.0"
     "@types/git-diff-parser" "^1.0.1"
     "@types/gitignore-parser" "^0.0.0"
     "@types/memoizee" "^0.4.8"
