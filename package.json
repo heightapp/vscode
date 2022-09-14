@@ -74,6 +74,8 @@
     "yargs": "^17.5.1"
   },
   "dependencies": {
+    "@heightapp/client": "1.0.2",
+    "@heightapp/update-todos": "1.0.4",
     "@types/lodash": "^4.14.184",
     "@types/node": "^18.7.11",
     "@types/uuid": "^8.3.4",
