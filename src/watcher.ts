@@ -2,9 +2,12 @@ import updateTodos, {parseGitIgnore} from '@heightapp/update-todos';
 import createClient from 'clientHelpers/createClient';
 import getDefaultListIds from 'clientHelpers/getDefaultListIds';
 import zipObject from 'lodash/zipObject';
+import createThrottleQueue from 'throttled-queue';
 import {AuthenticationSession, Disposable, EventEmitter, ExtensionContext, extensions, workspace} from 'vscode';
 
 import path from 'path';
+
+const MAX_TASKS_PER_MINUTE = 20;
 
 class Watcher {
   readonly session: AuthenticationSession;
@@ -13,6 +16,7 @@ class Watcher {
   private eventEmitter = new EventEmitter<{type: 'error'; error: unknown}>();
   private gitRepoRoots: Array<string>;
   private onDidSaveTextDocumentDisposable?: Disposable;
+  private throttle = createThrottleQueue(MAX_TASKS_PER_MINUTE, 60000);
 
   constructor(session: AuthenticationSession, context: ExtensionContext) {
     this.session = session;
@@ -54,7 +58,9 @@ class Watcher {
         repoPath,
         onCreateTask: async (name) => {
           try {
-            return await client.task.create({name, listIds, assigneesIds: [userId]});
+            return await this.throttle(() => {
+              return client.task.create({name, listIds, assigneesIds: [userId]});
+            });
           } catch (e) {
             this.eventEmitter.fire({type: 'error', error: e});
             return null;
