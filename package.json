@@ -3,7 +3,7 @@
   "displayName": "Height Code to Task",
   "description": "Automatically create tasks right from code comments.",
   "publisher": "Height",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -75,7 +75,7 @@
   },
   "dependencies": {
     "@heightapp/client": "1.0.2",
-    "@heightapp/update-todos": "1.1.2",
+    "@heightapp/update-todos": "1.1.3",
     "@types/lodash": "^4.14.184",
     "@types/memoizee": "^0.4.8",
     "@types/node": "^18.7.11",
