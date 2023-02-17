@@ -3,7 +3,7 @@
   "displayName": "Height Code to Task",
   "description": "Automatically create tasks right from code comments.",
   "publisher": "Height",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -77,11 +77,13 @@
     "@heightapp/client": "1.0.2",
     "@heightapp/update-todos": "1.1.2",
     "@types/lodash": "^4.14.184",
+    "@types/memoizee": "^0.4.8",
     "@types/node": "^18.7.11",
     "@types/uuid": "^8.3.4",
     "@types/vscode": "^1.70.0",
     "dotenv": "^16.0.1",
     "lodash": "^4.17.21",
+    "memoizee": "^0.4.15",
     "throttled-queue": "^2.1.4",
     "uuid": "^8.3.2"
   }
