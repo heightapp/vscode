@@ -22,6 +22,11 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@gerhobbelt/gitignore-parser@^0.2.0-9":
+  version "0.2.0-9"
+  resolved "https://registry.yarnpkg.com/@gerhobbelt/gitignore-parser/-/gitignore-parser-0.2.0-9.tgz#39aac7182445348d339be51b00c419ee19eab680"
+  integrity sha512-leOyCx+xnmioBSPqdkFBi1drkdM+Nm5+MfgffRcdkcVVUjFuAlxqEJ7jkYeXyHLvL9/l7ejPGooE1TPAo7qmmA==
+
 "@heightapp/client@1.0.2":
   version "1.0.2"
   resolved "https://registry.npmjs.org/@heightapp/client/-/client-1.0.2.tgz"
@@ -38,18 +43,14 @@
   dependencies:
     lodash "^4.17.11"
 
-"@heightapp/update-todos@1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@heightapp/update-todos/-/update-todos-1.1.2.tgz#244d7e2689303a3a01f39c19a1a1f4c8acefbf65"
-  integrity sha512-8TpZs9/OdwRNidcLHHxCgxh/VUui49PjqdFm1W5u4HH+9ubeD6M9qgzUSiZnoJQWG/VQ0eLlDYXhR74eFbGqAg==
+"@heightapp/update-todos@1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@heightapp/update-todos/-/update-todos-1.1.3.tgz#758bc6c51b5b2015bd153a8f24241dcfcc93d582"
+  integrity sha512-6nX5NS7k6nsJAqJOGZqQdhLVDBVhUYgxJB1J+Uck/uixXI/yUxsh91Qta9VPJojtasI/NZzeqocIpl3IRQpHxg==
   dependencies:
+    "@gerhobbelt/gitignore-parser" "^0.2.0-9"
     "@heightapp/comment-patterns" "0.13.0"
-    "@types/git-diff-parser" "^1.0.1"
-    "@types/gitignore-parser" "^0.0.0"
-    "@types/memoizee" "^0.4.8"
-    "@types/node" "^18.7.11"
     git-diff-parser "^1.0.0"
-    gitignore-parser "^0.0.2"
     memoizee "^0.4.15"
 
 "@humanwhocodes/config-array@^0.10.4":
@@ -92,18 +93,6 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@types/git-diff-parser@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@types/git-diff-parser/-/git-diff-parser-1.0.1.tgz#21248d49887fe5bc33860c545f73bbba797bd7d0"
-  integrity sha512-+4egjR2SDoiWFgLFaFpmMn9Xp+SE7QT5YxJ0CilXgw3VEdQjwuXHCVDKKoiOvyHro/4mx2FF/cFOJiHK2CVKWw==
-  dependencies:
-    "@types/node" "*"
-
-"@types/gitignore-parser@^0.0.0":
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/@types/gitignore-parser/-/gitignore-parser-0.0.0.tgz#4051109963d677e5ebcbfdb8036585437c6b4fe3"
-  integrity sha512-qxOKILdhl4e639fWdkMySS4tBkRYHkrU2ZNScsMu84EPicliFRr+gAXCLPrs7kTFWdDpgAIlxtUr+YCRtVjsKw==
-
 "@types/json-schema@^7.0.9":
   version "7.0.11"
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.11.tgz"
@@ -123,11 +112,6 @@
   version "0.4.8"
   resolved "https://registry.yarnpkg.com/@types/memoizee/-/memoizee-0.4.8.tgz#04adc0c266a0f5d72db0556fdda2ba17dad9b519"
   integrity sha512-qDpXKGgwKywnQt/64fH1O0LiPA++QGIYeykEUiZ51HymKVRLnUSGcRuF60IfpPeeXiuRwiR/W4y7S5VzbrgLCA==
-
-"@types/node@*":
-  version "18.7.18"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.18.tgz#633184f55c322e4fb08612307c274ee6d5ed3154"
-  integrity sha512-m+6nTEOadJZuTPkKR/SYK3A2d7FZrgElol9UP1Kae90VVU4a6mxnPuLiIW1m4Cq4gZ/nWb9GrdVXJCoCazDAbg==
 
 "@types/node@^18.7.11":
   version "18.7.11"
@@ -1045,11 +1029,6 @@ git-diff-parser@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/git-diff-parser/-/git-diff-parser-1.0.0.tgz#0a4ecb09388f3dbae92e1f5f73554142ebc11498"
   integrity sha512-m6I3x7Amb759jXYDITS8M8GfdxV636ni2zV2/RrGtEMuH3CD45hbTFsTaVtmYsTsIQ3x7jibsOcFOqJvP6ptxg==
-
-gitignore-parser@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/gitignore-parser/-/gitignore-parser-0.0.2.tgz#f61259b985dd91414b9a7168faef9171c2eec5df"
-  integrity sha512-X6mpqUv59uWLGD4n3hZ8Cu8KbF2PMWPSFYmxZjdkpm3yOU7hSUYnzTkZI1mcWqchphvqyuz3/BhgBR4E/JtkCg==
 
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
